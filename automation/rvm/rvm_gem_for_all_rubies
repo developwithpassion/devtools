@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+rubies=($(rvm list strings| tr " " "\n"))
+
+for the_ruby in ${rubies[@]}
+do
+  rvm $the_ruby@global gem $1 $2
+done
+  

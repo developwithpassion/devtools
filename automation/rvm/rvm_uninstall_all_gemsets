@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+expression = /.*(ruby.*\s)\[/
+items = `rvm list gemsets`.chomp.split("\n")
+items = items.select{|item| expression =~ item}
+items = items.map{|item| expression.match(item)[1]}
+
+items.each do|item|
+  system "rvm gemset delete #{item}"
+end
+
+

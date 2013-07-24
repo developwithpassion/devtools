@@ -1,0 +1,12 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="1f218af3-1f1e-4bc1-a369-1e87ab542424" shortcut="tc" description="Spec" text="[Fact]&#xD;&#xA;public void should$name$()&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>

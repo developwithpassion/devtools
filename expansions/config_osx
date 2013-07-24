@@ -1,0 +1,21 @@
+configatron.configure_from_hash :core =>{
+    :launcher => '',
+    :vim => 'mvim',
+    :editor => 'mvim -v -f',
+    :is_windows => false,
+    :is_cygwin => false,
+    :is_linux => false,
+    :is_mingw => false,
+    :is_osx => true,
+    :vi => "'mvim -v'",
+    :term => 'xterm-color'
+  },
+  :git => {
+    :autocrlf => 'input',
+    :merge_tool => 'vimdiff',
+    :diff_tool => 'vimdiff',
+    :editor => 'vi'
+  },
+  :vim => {
+    :environment => 'mac'
+  }

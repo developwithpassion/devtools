@@ -1,0 +1,34 @@
+#ignore case in file/folder names
+{{^ core.is_linux }}
+bind "set completion-ignore-case on"
+{{/core.is_linux }}
+#enable vim style command line behaviour
+set -o vi
+{{# core.is_mingw}}
+function vie()
+{
+  bind '"\C-i":complete'
+  bind '"\Tab":complete'
+}
+{{/core.is_mingw}}
+
+#don't duplicate history lines
+HISTCONTROL=ignoredups:ignorespace
+
+#append to history file instead of overwriting it
+{{^ core.is_linux}}
+shopt -s histappend
+{{/core.is_linux}}
+
+#set history length and file size
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+{{^ core.is_linux}}
+shopt -s checkwinsize
+{{/core.is_linux}}
+
+if [ -f /etc/bash_completion ] && ~ shopt -oq posix; then
+    . /etc/bash_completion
+fi
+

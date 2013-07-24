@@ -1,0 +1,14 @@
+#!/bin/bash
+
+. ~/.bash_source_rvm
+
+devtools_sync
+rvm use system
+vim_plugin_update
+
+devtools_sync
+# . ~/.bash_source_rvm
+# rvm use default
+# cd ~/repositories/developwithpassion/devtools
+# rvm 1.9.3@devtools
+# dwp_expand

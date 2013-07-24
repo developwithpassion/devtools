@@ -1,0 +1,18 @@
+. ~/.bash_aliases.shared
+
+{{# core.is_osx }}
+. ~/.bash_aliases.osx
+{{/core.is_osx}}
+
+{{# core.is_mingw }}
+. ~/.bash_aliases.mingw
+{{/core.is_mingw }}
+
+{{# core.is_cygwin }}
+. ~/.bash_aliases.cygwin
+{{/core.is_cygwin }}
+
+{{# core.is_windows }}
+. ~/.bash_aliases.windows
+{{/core.is_windows }}
+

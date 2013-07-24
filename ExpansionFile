@@ -1,0 +1,35 @@
+expand do
+  bundle_folder = %w[shared dotfiles vim .vim_runtime bundle].as_glob_pattern
+
+  FileUtils.mkdir bundle_folder unless Dir.exist?(bundle_folder)
+
+  log "The current platform is #{RUBY_PLATFORM}"
+  platform = 'osx' if /dar/ =~ RUBY_PLATFORM 
+  platform = 'mingw' if /ming/ =~ RUBY_PLATFORM 
+  platform = 'cygwin' if /cyg/ =~ RUBY_PLATFORM 
+  platform = 'linux' if /linux/ =~ RUBY_PLATFORM 
+
+  configs = {
+    :core => 
+    { 
+      :home => ENV["HOME"] ,
+      :devtools_root => File.expand_path(File.dirname(__FILE__))
+    }
+  }
+  configatron.configure_from_hash configs
+  platform_config_file = "expansions/config_#{platform}"
+  log "Loading config file #{platform_config_file}"
+  load "#{platform_config_file}"
+  user = File.basename(`whoami`.chomp)
+
+  load "#{user}.settings"
+
+  look_for_templates_in "**/*.{erb,mustache}"
+
+  glob("expansions/**/task*.rb"){|file| load file}
+  load "expansions/#{platform}.rb"
+
+  cleanup do
+    glob([configatron.core.home,"*.dotfile*"].as_glob_pattern){|item| log "Removing #{item}";FileUtils.rm_f(item)}
+  end
+end

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'date'
+
+system("vim","/to_backup/tasks/#{Date.today.year}")
+

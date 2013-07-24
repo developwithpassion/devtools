@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require_relative 'rvm_util.rb'
+
+def rubies
+  ruby_pattern = /\s*(ruby-.*)\s\[/
+
+  rubies = `rvm list`
+  rubies = rubies.split("\n")
+  rubies = rubies.select{ |item| ruby_pattern =~ item }
+  rubies = rubies.map{ |item| ruby_pattern.match(item)[1] }
+  rubies.sort! { |left, right| right <=> left }
+
+  rubies
+end
+
+def pick_ruby_version
+  puts "Which Ruby Version?"
+  versions = rubies
+  versions.each_with_index do |version, index|
+    puts "\t#{index + 1} - #{version}"
+  end
+  puts "Which?: "
+  version = gets.chomp.to_i
+  version = version - 1
+  versions[version]
+end
+
+def ruby_version
+  return pick_ruby_version if ARGV.length == 0
+
+  version = ARGV[0]
+  full_version = "ruby-#{version}"
+
+  return full_version
+end
+
+gemset = gemset_name(Dir.pwd)
+
+`echo #{ruby_version} > .ruby-version`
+`echo #{gemset} > .ruby-gemset`

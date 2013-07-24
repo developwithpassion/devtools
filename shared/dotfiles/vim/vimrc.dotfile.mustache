@@ -1,0 +1,13 @@
+fun! MySys()
+   return "{{ vim.environment }}"
+endfun
+
+set runtimepath=~/.vim_runtime,~/.vim_runtime/after,$VIMRUNTIME
+
+"trigger pathogen to load all plugins
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+source ~/.vim_runtime/vimrc
+source ~/.vim_runtime/wordlist.vim
+

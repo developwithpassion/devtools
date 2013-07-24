@@ -1,0 +1,82 @@
+set-option -g prefix C-b
+bind-key C-b last-window
+
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+set-option -g default-shell /bin/zsh
+
+
+# DVTM style pane selection
+bind 1 select-pane -t 1
+bind 2 select-pane -t 2
+bind 3 select-pane -t 3
+bind 4 select-pane -t 4
+bind 5 select-pane -t 5
+bind 6 select-pane -t 6
+bind 7 select-pane -t 7
+bind 8 select-pane -t 8
+bind 9 select-pane -t 9
+
+# Pane resizing
+bind -r C-h resize-pane -L 5
+bind -r C-j resize-pane -D 5
+bind -r C-k resize-pane -U 5
+bind -r C-l resize-pane -R 5
+
+set -g default-terminal "screen-256color"
+
+# Status bar
+set -g status-fg white
+set -g status-bg colour234
+set -g window-status-activity-attr bold
+set -g pane-border-fg colour245
+set -g pane-active-border-fg colour39
+set -g message-fg colour16
+set -g message-bg colour221
+set -g message-attr bold
+
+# Activity
+setw -g monitor-activity on
+set -g visual-activity on
+
+
+# Autorename sanely.
+setw -g automatic-rename on
+
+# Better name management
+bind c new-window \; command-prompt "rename-window '%%'"
+bind C new-window
+bind , command-prompt "rename-window '%%'"
+
+# Copy mode
+setw -g mode-keys vi
+bind ` copy-mode
+unbind [
+unbind p
+bind p paste-buffer
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-selection
+bind-key -t vi-copy Escape cancel
+
+#Pane movement
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+#Pasteboard management
+bind-key Y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+bind-key V run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
+
+#Highlight the active window
+set-window-option -g window-status-current-bg yellow
+set-window-option -g window-status-current-fg blue
+
+#Start window indexing at 1
+set -g base-index 1
+
+setw -g aggressive-resize on
+
+#Better splitting options
+bind-key d split-window -v
+bind-key f split-window -h
+bind-key '"' detach-client

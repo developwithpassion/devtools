@@ -1,0 +1,21 @@
+configatron.configure_from_hash :core =>{
+    :launcher => '',
+    :vim => "'start C:/utils/vim/vim73/gvim.exe'",
+    :editor => 'vi',
+    :is_windows => true,
+    :is_linux => false,
+    :is_cygwin => false,
+    :is_mingw => true,
+    :is_osx => false,
+    :vi => "/c/utils/vim/vim73/vim.exe",
+    :term => 'xterm-color'
+  },
+  :git => {
+    :autocrlf => 'true',
+    :merge_tool => 'gvimdiff', #bc3 for beyond compare
+    :diff_tool => 'gvimdiff',  #bc3 for beyond compare
+    :editor => 'C:/utils/vim/vim73/vim.exe',
+  },
+  :vim => {
+    :environment => 'windows'
+  }

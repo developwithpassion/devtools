@@ -1,0 +1,47 @@
+"2.3.1 (created: 2010/04/07 18:25:13)
+
+set editor='bash -lc "mvim -g -f \$*" mvim '
+set runtimepath=$HOME/.vimperator
+source! /Users/jp/.vimperatorrc.local
+
+" change the map leader to be the , as its easier to access"
+set mapleader=,
+
+" vim: set ft=vimperator:
+
+" egg timer shortcuts
+:com -nargs=1 timer :t http://e.ggtimer.com/<args>
+:com -nargs=1 timerm :t http://e.ggtimer.com/<args>min
+:com -nargs=1 timerh :t http://e.ggtimer.com/<args>hour
+
+" administration pages
+:com gbmo -description "bmo_mastercard" :t https://www1.bmo.com/MasterCard/MCmain?product=15 
+:com gcibc -description cibc :t https://www.cibc.com/ca/personal.html?cid=SignOn_hp_27055_D_E
+:com gdropbox -description dropbox :t http://www.dropbox.com/login
+:com gearthclassmail -description earth_class_mail :t https://secure.earthclassmail.com/Login.aspx
+:com geventbrite -description eventbrite :t eventbrite.com/login
+:com gfreshbooks -description freshbooks :t https://developwithpassion.freshbooks.com
+:com ggithub :t https://github.com/login
+:com ggotomeeting :t https://www2.gotomeeting.com/island/login.tmpl?Portal=www.gotomeeting.com
+:com glastpass :t https://lastpass.com/index.php?ac=1
+:com glinkedin :t https://www.linkedin.com/secure/login?goback=&trk=hb_signin
+:com glumosity :t http://www.lumosity.com/login
+:com gmail :t mail.developwithpassion.com
+:com gmailkeymando :t https://www.google.com/a/keymando.com/ServiceLogin?service=mail&passive=true&rm=false&continue=http://mail.google.com/a/keymando.com/&ltmpl=default&ltmplcache=2
+:com gmailfilter :t https://login.postini.com/a/developwithpassion.com
+:com grbc :t https://www1.royalbank.com/cgi-bin/rbaccess/rbunxcgi?F6=1&F7=IB&F21=IB&F22=IB&REQUEST=ClientSignin&LANGUAGE=ENGLISH
+:com gtdbank :t https://easywebcpo.td.com/waw/idp/login.htm?execution=e1s1
+:com gtmobile -description "tmobile" :t https://my.t-mobile.com/Login/?rc=&dest=https%3a%2f%2fmy.t-mobile.com%3a443%2fDefault.aspx%3frp.Logon%3dtrue
+:com gorange :t https://services.orange.co.uk/sam/templates/web/sign_in_paygtopup.htm
+
+"client sections
+"daxko
+:com gdaxkojira -description daxkojira :t http://jira.dcc001.dccllc.com:8090/secure/Dashboard.jspa
+:com gdaxkoweb -description daxkoweb :t https://mydaxko.com
+:com gdaxkomail -description daxkomail :t http://mail.daxko.com
+
+"webmeetings
+:com gadobeconnect -description adobeconnect :t https://na8cps.adobeconnect.com/system/login?domain=meet32105458.adobeconnect.com&next=%2Fadmin%3Fdomain%3Dmeet32105458.adobeconnect.com&set-lang=en
+
+"close the current window
+:nmap <leader>c :q!<CR>

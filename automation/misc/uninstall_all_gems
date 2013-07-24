@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+gems = `gem list --local`.chomp.split("\n")
+puts gems

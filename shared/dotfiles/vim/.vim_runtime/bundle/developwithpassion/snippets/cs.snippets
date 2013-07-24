@@ -1,0 +1,154 @@
+# #!/usr/bin/env ruby
+
+snippet class
+	${1} class ${2}
+	{
+
+		${3}
+
+	}
+
+snippet method
+	public ${1} ${2}(${3})
+	{
+		${4}
+	}
+
+snippet if
+	if (${1})
+	{
+		${2}
+	}
+
+snippet foreach
+	foreach(var ${1} in ${2})
+	{
+		${3}
+	}
+
+snippet sif
+	if (${1})
+
+snippet nowc
+	public class ${1}Specs
+	{
+		public class concern:Observes<${2},${1}>
+		{
+
+		}
+
+		public class ${3} : concern
+		{
+
+			It should_${4} = () =>
+				${5}
+				
+		}
+	}
+
+snippet owc
+	public class ${1} : concern
+	{
+
+		It should_${2} = () =>
+			${3}
+			
+	}
+
+snippet noc
+	public class ${1}Specs
+	{
+		public class concern:Observes<${1}>
+		{
+
+		}
+
+		public class ${2} : concern
+		{
+
+			It should_${3} = () =>
+				${4}
+				
+		}
+	}
+
+snippet oc
+	public class ${1} : concern
+	{
+
+		It should_${2} = () =>
+			${3}
+			
+	}
+
+snippet nso
+	public class ${1}Specs
+	{
+		public class concern:Observes
+		{
+
+		}
+
+		public class ${2} : concern
+		{
+
+			It should_${3} = () =>
+				${4}
+				
+		}
+	}
+
+snippet so
+	public class ${1} : concern
+	{
+
+		It should_${2} = () =>
+			${3}
+			
+	}
+
+snippet bddb
+	Because b = () =>
+		${1}
+
+
+snippet bddc
+	Establish c = () =>
+	{
+		${1}
+	};
+
+snippet it
+	It should_${1} = () =>
+		${2};
+
+snippet el
+	() => ${1}
+
+snippet deps
+	depends.on<${1}>();
+
+snippet fake
+	fake.an<${1}>();
+
+snippet ge
+	>= ${1}
+
+snippet le
+	<= ${1}
+
+snippet ne
+	!= ${1}
+
+snippet try
+	try
+	{
+
+	}
+	catch (${1} ${2})
+	{
+
+	}
+
+snippet se
+	ShouldEqual(${1})

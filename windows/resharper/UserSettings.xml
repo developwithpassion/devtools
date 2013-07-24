@@ -1,0 +1,437 @@
+<Configuration>
+  <SettingsComponent>
+    <string>
+      <setting name="ExportTemplatesDialog.FileName">C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\file_templates_general.xml</setting>
+      <setting name="JetBrains.ReSharper.Intentions.CSharp.QuickFixes.CreateClassFromNewFixBase.DefaultInterfacePrefix">I</setting>
+      <setting name="JiraProxyHost">
+      </setting>
+      <setting name="KeyboardScheme">Idea</setting>
+    </string>
+    <integer>
+      <setting name="bracketMatchHighlightingPosition">1</setting>
+      <setting name="bracketMatchHighlightingStyle">0</setting>
+      <setting name="JetBrains.ReSharper.Intentions.CSharp.QuickFixes.GenerateSwitchLabelsFix.MAGIC_CONST">65535</setting>
+      <setting name="jetbrains.resharper.livetemplates.editor.splitterposition">800</setting>
+      <setting name="JiraProxyPort">0</setting>
+      <setting name="livetemplates.defaultgrouping">0</setting>
+      <setting name="MoveToResource.MoveSameElementsScope">0</setting>
+      <setting name="RefactoringWizardFormLocationX">224</setting>
+      <setting name="RefactoringWizardFormLocationY">-384</setting>
+      <setting name="SMART_BRACE_INSERT">1</setting>
+      <setting name="UserInputDeferTime">300</setting>
+    </integer>
+    <boolean>
+      <setting name="AlwaysShowDialogAboutException-v2">False</setting>
+      <setting name="BulbsManager.SortBulbs">False</setting>
+      <setting name="CodeViewManager.AutoExpandResults">False</setting>
+      <setting name="CreateVariableFixBase">True</setting>
+      <setting name="CSharpLocalizationOptions.DontAnalyseVerbatimStrings">True</setting>
+      <setting name="DoNotShowAdvertiseFeedbackForm">False</setting>
+      <setting name="FixMouseWheel">True</setting>
+      <setting name="FORMAT_BLOCK_ON_RBRACE">True</setting>
+      <setting name="FORMAT_STATEMENT_ON_SEMICOLON">True</setting>
+      <setting name="GotoFile.IncludeFolders">False</setting>
+      <setting name="HideVsMenuItems">True</setting>
+      <setting name="JetBrains.ReSharper.Refactorings.Rename.RenameFile">True</setting>
+      <setting name="JetBrains.ReSharper.Refactorings.Rename.SearchInStrings">False</setting>
+      <setting name="JetBrains.ReSharper.Refactorings.RenameNamespace.SearchInStrings">True</setting>
+      <setting name="jetbrains.resharper.treeview.filter">True</setting>
+      <setting name="JiraIsAnonymous">False</setting>
+      <setting name="JiraProxyAuthentication">False</setting>
+      <setting name="JiraUseDefaultProxy">True</setting>
+      <setting name="MoveToResource.MoveSameElements">True</setting>
+      <setting name="NavigateByControlClick">True</setting>
+      <setting name="PopupListCyclicScroll">True</setting>
+      <setting name="showMemoryUsage">False</setting>
+      <setting name="skipResultsForSingleHierarchyItem">True</setting>
+      <setting name="skipResultsForSingleUsage">True</setting>
+      <setting name="SMART_INDENT_ON_ENTER_NEW">False</setting>
+      <setting name="SMART_PARENTH_INSERT">True</setting>
+      <setting name="SolutionAnalysisIndicator.RoundProgress">True</setting>
+      <setting name="SolutionAnalysisIndicator.ShowErorsCount">True</setting>
+      <setting name="SubmitActivityLogs">False</setting>
+      <setting name="SynchronizeOnFrameActivation">True</setting>
+      <setting name="USE_VS_ICONS">False</setting>
+      <setting name="UseCamelHumps">False</setting>
+      <setting name="UseVarForIntroduceVariableRefactoring">False</setting>
+      <setting name="UseVarForIntroduceVariableRefactoringEvident">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <HighlightingSettings>
+    <SeverityTable>
+      <InconsistentNaming>HINT</InconsistentNaming>
+      <ClassWithVirtualMembersNeverInherited.Global>HINT</ClassWithVirtualMembersNeverInherited.Global>
+      <MemberCanBeMadeStatic.Local>HINT</MemberCanBeMadeStatic.Local>
+      <ClassNeverInstantiated.Global>HINT</ClassNeverInstantiated.Global>
+      <FieldCanBeMadeReadOnly.Local>HINT</FieldCanBeMadeReadOnly.Local>
+      <ParameterHidesMember>HINT</ParameterHidesMember>
+      <UnusedMember.Global>HINT</UnusedMember.Global>
+      <RedundantThisQualifier>HINT</RedundantThisQualifier>
+      <EmptyConstructor>ERROR</EmptyConstructor>
+      <MemberCanBePrivate.Global>HINT</MemberCanBePrivate.Global>
+      <ConvertClosureToMethodGroup>HINT</ConvertClosureToMethodGroup>
+      <ConvertToLambdaExpression>HINT</ConvertToLambdaExpression>
+      <LocalVariableHidesMember>HINT</LocalVariableHidesMember>
+      <FieldCanBeMadeReadOnly.Global>HINT</FieldCanBeMadeReadOnly.Global>
+      <MemberCanBeMadeStatic.Global>HINT</MemberCanBeMadeStatic.Global>
+      <LoopCanBeConvertedToQuery>HINT</LoopCanBeConvertedToQuery>
+      <MemberCanBeProtected.Global>HINT</MemberCanBeProtected.Global>
+      <DoNotCallOverridableMethodsInConstructor>HINT</DoNotCallOverridableMethodsInConstructor>
+      <ConvertToConstant.Local>HINT</ConvertToConstant.Local>
+    </SeverityTable>
+  </HighlightingSettings>
+  <MetadataViewerSettings ShowNonVisibleMembers="False" ShowXmlDoc="False" ReorderMembers="True" DecompileMethodBodies="True" Language="CSHARP" />
+  <ExternalSourcesSettings NavigationMode="Sources" FirstTimeFormShown-2="True" />
+  <Pdb EnableDownloading="True" UseDebugInformationForNavigation="True" />
+  <LiveTemplatesManager>
+    <UserTemplates />
+    <PredefinedChanges>
+      <Changed />
+    </PredefinedChanges>
+    <FileTemplates>
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\live_templates_general.xml" />
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\live_templates_machine_specifications.xml" />
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\live_templates_developwithpassion_specifications.xml" />
+    </FileTemplates>
+    <DisabledTemplates>
+      <TemplateReference uid="b1949918-f3be-4271-859d-5fe23f749bf9" name="&lt;No Name&gt;" />
+    </DisabledTemplates>
+  </LiveTemplatesManager>
+  <SurroundManager>
+    <QuickLists>
+      <QuickList name="Other Files">
+        <Removed />
+      </QuickList>
+      <QuickList name="C# files">
+        <TemplateReference uid="d00002ec-552b-43a7-855a-4d9056bc5e44" name="if" />
+        <TemplateReference uid="0d6efb3f-0a28-49ac-a840-a5c18a10820c" name="while" />
+        <TemplateReference uid="38772f22-c779-4535-87ae-f2cbfc28d8bb" name="for" />
+        <TemplateReference uid="3e5873f5-71b2-4323-a98d-c864e3553e95" name="do..while" />
+        <TemplateReference uid="539867cb-c2bb-4a76-9be4-43499424a817" name="#region" />
+        <TemplateReference uid="bf9aa46f-cf30-446c-80d3-943eade77764" name="#if..#endif" />
+        <TemplateReference uid="5525b896-5c99-477c-aa55-871b4e64d487" name="{}" />
+        <TemplateReference uid="2c7fbadc-e259-40d3-9346-89277c463fdc" name="try..catch" />
+        <TemplateReference uid="03562c81-32c2-43e8-95f2-ccae5fce50fc" name="try..finally" />
+        <TemplateReference uid="2cdb716b-61fd-4a31-b148-2052fa256b96" name="cast" />
+        <TemplateReference uid="d1a7844c-e289-438a-aa26-31bbe4694112" name="tag" />
+        <TemplateReference uid="bfed504b-c6a2-492a-8098-6067ce44f7ca" name="lock" />
+        <TemplateReference uid="ce403579-55e1-4d4d-869c-de09fe5bf5a5" name="namespace" />
+        <TemplateReference uid="2025ca6a-c03e-4da6-ab1b-a4e6c572a94a" name="()" />
+        <TemplateReference uid="2ca8bd79-c73f-4123-b2e5-8aa5b58ec3be" name="Explicit Delegate Block" />
+        <TemplateReference uid="d02febcf-1b14-43b7-b8a6-87ffd356c2e0" name="class" />
+        <Removed />
+      </QuickList>
+      <QuickList name="Visual Basic files">
+        <TemplateReference uid="6a01b8ff-4981-4873-9bc3-bf8e1c434865" name="If" />
+        <TemplateReference uid="389a11c8-54d3-4e96-9b10-0d6736b93044" name="If..Else" />
+        <TemplateReference uid="8c6134b0-b6f4-48a3-a5bc-3878f9a96f04" name="SyncLock" />
+        <TemplateReference uid="ab9b078f-4a86-45d8-b5fb-e27910cbb720" name="Using" />
+        <TemplateReference uid="9ee3a98e-24ed-4993-98ae-ac77c05bc93f" name="CType" />
+        <TemplateReference uid="c4d6ceb3-d45f-4d8e-838d-d1e64a1f671b" name="DirectCast" />
+        <TemplateReference uid="c5765f81-208e-4342-9e83-460d2906a8f5" name="TryCast" />
+        <Removed />
+      </QuickList>
+      <QuickList name="XML files">
+        <TemplateReference uid="c44a28a4-c56c-4ff4-b8db-9b563ae61b01" name="using" />
+        <Removed />
+      </QuickList>
+      <QuickList name="HTML files">
+        <TemplateReference uid="db3304b5-a0fe-433f-a745-2407f990073e" name="tag" />
+        <TemplateReference uid="8600f923-3358-4842-acb7-2588dbc8e506" name="link" />
+        <Removed />
+      </QuickList>
+      <QuickList name="ASP.NET files">
+        <TemplateReference uid="db3304b5-a0fe-433f-a745-2407f990073e" name="tag" />
+        <TemplateReference uid="8600f923-3358-4842-acb7-2588dbc8e506" name="link" />
+        <TemplateReference uid="02e32ab5-abf1-4580-8c6c-a122642f941e" name="foreach" />
+        <TemplateReference uid="68c3e345-0a7d-41cf-93ec-de9b0334be7e" name="foreach" />
+        <Removed />
+      </QuickList>
+      <QuickList name="JavaScript files">
+        <TemplateReference uid="5770bced-c0f9-4757-bff7-11aa644094cb" name="" />
+        <TemplateReference uid="bce7a3a4-3a36-4fc5-b722-a94a7879704b" name="" />
+        <Removed />
+      </QuickList>
+      <QuickList name="Other files">
+        <Removed />
+      </QuickList>
+      <QuickList name="Resx files">
+        <Removed />
+      </QuickList>
+      <QuickList name="Razor files">
+        <Removed />
+      </QuickList>
+    </QuickLists>
+    <UserTemplates />
+    <PredefinedChanges>
+      <Changed />
+    </PredefinedChanges>
+    <FileTemplates>
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\surround_templates_general.xml" />
+    </FileTemplates>
+  </SurroundManager>
+  <ContextActions>
+    <JetBrains.ReSharper.Intentions.CSharp.ContextActions.NonI18n.CSharpSurroundWithQuotesAction>False</JetBrains.ReSharper.Intentions.CSharp.ContextActions.NonI18n.CSharpSurroundWithQuotesAction>
+    <JetBrains.ReSharper.Intentions.CSharp.ContextActions.InlineAsAnonymousTypeAction>False</JetBrains.ReSharper.Intentions.CSharp.ContextActions.InlineAsAnonymousTypeAction>
+  </ContextActions>
+  <FileTemplatesManager>
+    <QuickLists>
+      <QuickList name="Other Projects">
+        <Removed />
+      </QuickList>
+      <QuickList name="C# projects">
+        <TemplateReference uid="560aab2c-307f-4c70-a99a-a3ec249e3153" name="Class" />
+        <TemplateReference uid="deef867e-e0e6-4793-ad81-f4f7bcd24d8f" name="Delegate" />
+        <TemplateReference uid="3667aa6f-7d24-4446-89df-536819a6d103" name="Interface" />
+        <TemplateReference uid="d03eb89b-79ff-472e-baab-217c25589c77" name="Struct" />
+        <TemplateReference uid="30ac107b-32b0-4f0a-95a3-763001e1dbf6" name="Enum" />
+        <TemplateReference uid="83723778-1442-487b-b6b4-a0ac9f37ff4d" name="ValueDelegate" />
+        <TemplateReference uid="cc48a0c6-82d1-46d3-a4b3-93807b6b2f08" name="ObservationsWithContract" />
+        <TemplateReference uid="46080921-ca29-4e93-b240-bf6f99c62cfd" name="ObservationsWithoutContract" />
+        <TemplateReference uid="49a266eb-771d-4d5b-aab7-3fa64c3fe603" name="StaticObservations" />
+        <Removed />
+      </QuickList>
+      <QuickList name="Visual Basic projects">
+        <TemplateReference uid="b1ee1e2c-928e-43dd-97a7-2cd7e208d02e" name="Class" />
+        <TemplateReference uid="797a996f-97ef-4788-a0a6-0eb6e4f7e99e" name="Interface" />
+        <TemplateReference uid="3a76e258-e766-40f6-a093-00c04f653a65" name="Structure" />
+        <TemplateReference uid="7899541c-0e97-4670-8034-04bcc3b1ff03" name="Enum" />
+        <TemplateReference uid="2a5b7d0d-34bc-4537-a50a-b2e94d885702" name="Module" />
+        <Removed />
+      </QuickList>
+      <QuickList name="ASP.NET (C#) projects">
+        <TemplateReference uid="33b864ee-57c8-41d4-8935-e4c52774fca2" name="Web form without master page" />
+        <TemplateReference uid="4ae22a01-d37a-4407-8cf6-ef841f7dcab6" name="Web form with master page" />
+        <TemplateReference uid="d602a016-05af-48b6-bbfb-bb2ac28d13a6" name="Master page without base master page" />
+        <TemplateReference uid="a1b0a253-d992-43b7-9673-2c1f6f7fca7f" name="Master page with base master page" />
+        <TemplateReference uid="ef7287d8-1fd7-460f-9855-c2ee3cdf5ee4" name="Web control" />
+        <Removed />
+      </QuickList>
+      <QuickList name="ASP.NET (VB.NET) projects">
+        <TemplateReference uid="fee25fcf-ac69-4449-bb6c-55369553c527" name="Web form without master page" />
+        <TemplateReference uid="16e0ecb6-672c-484c-994c-86d57e73e343" name="Web form with master page" />
+        <TemplateReference uid="56c19cde-128d-438d-8c64-3b5380508d3d" name="Master page without base master page" />
+        <TemplateReference uid="672311b7-067e-4a57-b32f-79c7a06fa74f" name="Master page with base master page" />
+        <TemplateReference uid="6553602b-0f80-4ada-9b76-95055c0a747f" name="Web control" />
+        <Removed />
+      </QuickList>
+      <QuickList name="Razor (C#) projects">
+        <TemplateReference uid="28930f00-63d1-49ef-9108-d49218df0568" name="Razor MVC View" />
+        <TemplateReference uid="259949c3-530e-41ff-b0a8-6ba5c123b7b6" name="Razor MVC View with Layout" />
+        <TemplateReference uid="2bad39df-7bf3-44d5-8d98-1614a5ffef92" name="Razor MVC Partial View" />
+        <Removed />
+      </QuickList>
+    </QuickLists>
+    <UserTemplates />
+    <PredefinedChanges>
+      <Changed />
+    </PredefinedChanges>
+    <FileTemplates>
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\file_templates_general.xml" />
+      <FileTemplate file="C:\Users\jp\repositories\developwithpassion\devtools\windows\resharper\templates\file_templates_developwithpassion_specifications_rhino_mocks.xml" />
+    </FileTemplates>
+  </FileTemplatesManager>
+  <CodeStyleSettings>
+    <CSS>
+      <FormatSettings />
+      <Naming2 />
+    </CSS>
+    <CSharp>
+      <FormatSettings>
+        <ALIGN_MULTILINE_ARRAY_AND_OBJECT_INITIALIZER>False</ALIGN_MULTILINE_ARRAY_AND_OBJECT_INITIALIZER>
+        <ALIGN_MULTILINE_EXPRESSION>False</ALIGN_MULTILINE_EXPRESSION>
+        <ANONYMOUS_METHOD_DECLARATION_BRACES>NEXT_LINE</ANONYMOUS_METHOD_DECLARATION_BRACES>
+        <CASE_BLOCK_BRACES>NEXT_LINE</CASE_BLOCK_BRACES>
+        <EXPLICIT_INTERNAL_MODIFIER>False</EXPLICIT_INTERNAL_MODIFIER>
+        <EXPLICIT_PRIVATE_MODIFIER>False</EXPLICIT_PRIVATE_MODIFIER>
+        <INDENT_ANONYMOUS_METHOD_BLOCK>False</INDENT_ANONYMOUS_METHOD_BLOCK>
+        <INDENT_EMBRACED_INITIALIZER_BLOCK>False</INDENT_EMBRACED_INITIALIZER_BLOCK>
+        <INITIALIZER_BRACES>NEXT_LINE</INITIALIZER_BRACES>
+        <KEEP_BLANK_LINES_IN_CODE>1</KEEP_BLANK_LINES_IN_CODE>
+        <KEEP_BLANK_LINES_IN_DECLARATIONS>1</KEEP_BLANK_LINES_IN_DECLARATIONS>
+        <MODIFIERS_ORDER IsNull="False">
+          <Item>public</Item>
+          <Item>protected</Item>
+          <Item>internal</Item>
+          <Item>private</Item>
+          <Item>new</Item>
+          <Item>abstract</Item>
+          <Item>virtual</Item>
+          <Item>override</Item>
+          <Item>sealed</Item>
+          <Item>static</Item>
+          <Item>readonly</Item>
+          <Item>extern</Item>
+          <Item>unsafe</Item>
+          <Item>volatile</Item>
+        </MODIFIERS_ORDER>
+        <PLACE_SIMPLE_ANONYMOUSMETHOD_ON_SINGLE_LINE>False</PLACE_SIMPLE_ANONYMOUSMETHOD_ON_SINGLE_LINE>
+        <SPACE_BEFORE_SIZEOF_PARENTHESES>False</SPACE_BEFORE_SIZEOF_PARENTHESES>
+        <SPACE_BEFORE_TYPEOF_PARENTHESES>False</SPACE_BEFORE_TYPEOF_PARENTHESES>
+        <STICK_COMMENT>False</STICK_COMMENT>
+      </FormatSettings>
+      <UsingsSettings />
+      <Naming2>
+        <EventHandlerPatternLong>$object$_On$event$</EventHandlerPatternLong>
+        <EventHandlerPatternShort>$event$Handler</EventHandlerPatternShort>
+      </Naming2>
+    </CSharp>
+    <HTML>
+      <FormatSettings />
+    </HTML>
+    <JavaScript>
+      <FormatSettings />
+      <Naming2>
+        <UserRule Name="JS_LOCAL_VARIABLE" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+        <UserRule Name="JS_FUNCTION" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+        <UserRule Name="JS_PARAMETER" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+        <UserRule Name="JS_LABEL" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+        <UserRule Name="JS_GLOBAL_VARIABLE" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+        <UserRule Name="JS_OBJECT_PROPERTY_OF_FUNCTION" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+        <UserRule Name="JS_CONSTRUCTOR" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+      </Naming2>
+    </JavaScript>
+    <VB>
+      <FormatSettings />
+      <ImportsSettings />
+      <Naming2>
+        <EventHandlerPatternLong>$object$_On$event$</EventHandlerPatternLong>
+        <EventHandlerPatternShort>$event$Handler</EventHandlerPatternShort>
+      </Naming2>
+    </VB>
+    <Web>
+      <Naming2 />
+    </Web>
+    <XML>
+      <FormatSettings />
+    </XML>
+    <Xaml>
+      <Naming2 />
+    </Xaml>
+    <GenerateMemberBody />
+    <Naming2>
+      <EventHandlerPatternLong>$object$_On$event$</EventHandlerPatternLong>
+      <EventHandlerPatternShort>$event$Handler</EventHandlerPatternShort>
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="AaBb" ElementKind="TypesAndNamespaces" />
+      <PredefinedRule Inspect="True" Prefix="I" Suffix="" Style="AaBb" ElementKind="Interfaces" />
+      <PredefinedRule Inspect="True" Prefix="T" Suffix="" Style="AaBb" ElementKind="TypeParameters" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="MethodPropertyEvent" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="Locals" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="LocalConstants" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="Parameters" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="PublicFields" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="PrivateInstanceFields" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="PrivateStaticFields" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="Constants" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="PrivateConstants" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="StaticReadonly" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="PrivateStaticReadonly" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="aa_bb" ElementKind="EnumMember" />
+      <PredefinedRule Inspect="True" Prefix="" Suffix="" Style="AaBb" ElementKind="Other" />
+    </Naming2>
+  </CodeStyleSettings>
+  <TodoManager ActiveGrouping="0">
+    <Pattern Name="Todo" Id="961894CCC510410ABE2B99132B253C80" Regexp="(\W|^)(?&lt;TAG&gt;TODO)(\W|$)(.*)" CaseSensitive="False" Color="Blue" Icon="Normal" LookInComments="True" LookInIdentifiers="False" LookInStringLiterals="False" />
+    <Pattern Name="Note" Id="961894CCC510410ABE2B99132B253C81" Regexp="(\W|^)(?&lt;TAG&gt;NOTE)(\W|$)(.*)" CaseSensitive="False" Color="ffff8000" Icon="Warning" LookInComments="True" LookInIdentifiers="False" LookInStringLiterals="False" />
+    <Pattern Name="Bug" Id="9F4E80481F12431CB36D19D6738780F1" Regexp="(\W|^)(?&lt;TAG&gt;BUG)(\W|$)(.*)" CaseSensitive="False" Color="Red" Icon="Error" LookInComments="True" LookInIdentifiers="False" LookInStringLiterals="False" />
+    <Pattern Name="Not Implemented" Id="9F4E80481F12431CB36D19D6738780F2" Regexp="NotImplementedException" CaseSensitive="False" Color="Red" Icon="Edit" LookInComments="False" LookInIdentifiers="True" LookInStringLiterals="False" />
+    <Filter Name="Todos" Id="6E3EB9662CFB491EBD2103D8654051DF" Active="False">
+      <PatternRef Id="961894CCC510410ABE2B99132B253C80" />
+    </Filter>
+    <Filter Name="Notes" Id="0069D9FE451E44B181256291430424FC" Active="False">
+      <PatternRef Id="961894CCC510410ABE2B99132B253C81" />
+    </Filter>
+    <Filter Name="Bugs" Id="A674BC0145094E3D8C9C867C0FDAF288" Active="False">
+      <PatternRef Id="9F4E80481F12431CB36D19D6738780F1" />
+    </Filter>
+    <Filter Name="Not Implemented" Id="A674BC0145094E3D8C9C867C0FDAF289" Active="False">
+      <PatternRef Id="9F4E80481F12431CB36D19D6738780F2" />
+    </Filter>
+  </TodoManager>
+  <ExceptionReporting>
+    <UserName>
+    </UserName>
+    <Password>E.FVL8jaRtGis=</Password>
+    <Anonymous>False</Anonymous>
+  </ExceptionReporting>
+  <DefaultTextControlSchemeManager>
+    <CaretRow>False</CaretRow>
+  </DefaultTextControlSchemeManager>
+  <CodeCleanup SilentCleanup="jp" RecentlyUsed="jp">
+    <Profile name="jp">
+      <AspOptimizeRegisterDirectives>False</AspOptimizeRegisterDirectives>
+      <HtmlReformatCode>False</HtmlReformatCode>
+      <CSArrangeThisQualifier>False</CSArrangeThisQualifier>
+      <CSRemoveCodeRedundancies>True</CSRemoveCodeRedundancies>
+      <CSUseAutoProperty>True</CSUseAutoProperty>
+      <CSMakeFieldReadonly>False</CSMakeFieldReadonly>
+      <CSUseVar>
+        <BehavourStyle>CAN_CHANGE_BOTH</BehavourStyle>
+        <LocalVariableStyle>ALWAYS_IMPLICIT</LocalVariableStyle>
+        <ForeachVariableStyle>ALWAYS_IMPLICIT</ForeachVariableStyle>
+      </CSUseVar>
+      <CSUpdateFileHeader>False</CSUpdateFileHeader>
+      <VBOptimizeImports>False</VBOptimizeImports>
+      <VBShortenReferences>False</VBShortenReferences>
+      <JsInsertSemicolon>False</JsInsertSemicolon>
+      <JsReformatCode>False</JsReformatCode>
+      <CssReformatCode>False</CssReformatCode>
+      <XMLReformatCode>False</XMLReformatCode>
+      <CSOptimizeUsings>
+        <OptimizeUsings>True</OptimizeUsings>
+        <EmbraceInRegion>False</EmbraceInRegion>
+        <RegionName>
+        </RegionName>
+      </CSOptimizeUsings>
+      <CSShortenReferences>True</CSShortenReferences>
+      <VBReformatCode>False</VBReformatCode>
+      <CSReformatCode>True</CSReformatCode>
+      <CSharpFormatDocComments>False</CSharpFormatDocComments>
+      <CSReorderTypeMembers>False</CSReorderTypeMembers>
+    </Profile>
+  </CodeCleanup>
+  <CodeCompletionController>
+    <AutoPopupAfterDot>False</AutoPopupAfterDot>
+    <AutoPopupAfterNew>False</AutoPopupAfterNew>
+    <AutoPopupOnIdentifier>False</AutoPopupOnIdentifier>
+  </CodeCompletionController>
+  <RunInspection.Filter>
+    <ConfigurableSeverity Id="UnusedMember.Global" />
+    <ConfigurableSeverity Id="ClassWithVirtualMembersNeverInherited.Global" />
+    <ConfigurableSeverity Id="ClassNeverInstantiated.Global" />
+    <ConfigurableSeverity Id="MemberCanBePrivate.Global" />
+    <ConfigurableSeverity Id="MemberCanBeProtected.Global" />
+    <ConfigurableSeverity Id="MemberCanBeInternal" />
+    <ConfigurableSeverity Id="MemberCanBeMadeStatic.Local" />
+    <ConfigurableSeverity Id="MemberCanBeMadeStatic.Global" />
+    <ConfigurableSeverity Id="ClassCanBeSealed.Local" />
+    <ConfigurableSeverity Id="ClassCanBeSealed.Global" />
+    <ConfigurableSeverity Id="FieldCanBeMadeReadOnly.Local" />
+    <ConfigurableSeverity Id="FieldCanBeMadeReadOnly.Global" />
+    <ConfigurableSeverity Id="SuggestBaseTypeForParameter" />
+    <ConfigurableSeverity Id="InconsistentNaming" />
+    <ConfigurableSeverity Id="RedundantThisQualifier" />
+    <ConfigurableSeverity Id="RedundantToStringCallForValueType" />
+    <ConfigurableSeverity Id="RedundantArgumentNameForLiteralExpression" />
+    <ConfigurableSeverity Id="SimilarAnonymousTypeNearby" />
+    <ConfigurableSeverity Id="LocalVariableHidesMember" />
+    <ConfigurableSeverity Id="ParameterHidesMember" />
+    <ConfigurableSeverity Id="TryStatementsCanBeMerged" />
+    <ConfigurableSeverity Id="SuggestUseVarKeywordEverywhere" />
+    <ConfigurableSeverity Id="ConvertToAutoPropertyWithPrivateSetter" />
+    <ConfigurableSeverity Id="ConvertIfStatementToReturnStatement" />
+    <ConfigurableSeverity Id="InvertIf" />
+    <ConfigurableSeverity Id="ConvertIfStatementToSwitchStatement" />
+    <ConfigurableSeverity Id="ConvertToLambdaExpression" />
+    <ConfigurableSeverity Id="ConvertClosureToMethodGroup" />
+    <ConfigurableSeverity Id="LoopCanBePartlyConvertedToQuery" />
+    <ConfigurableSeverity Id="LoopCanBeConvertedToQuery" />
+    <ConfigurableSeverity Id="UnknownCssVendorExtension" />
+    <ConfigurableSeverity Id="Xaml.BindingWithoutContextReferenceNotResolvedHighlighting" />
+    <StaticSeverity Severity="2" Title="Structural Search Hints" GroupId="StructuralSearch" />
+  </RunInspection.Filter>
+  <DecompiledSourceLegalNotice Agreed="True" />
+  <ProductUsageFeedbackSubmitter>
+    <myShouldPrompt>False</myShouldPrompt>
+  </ProductUsageFeedbackSubmitter>
+</Configuration>

@@ -1,0 +1,82 @@
+<TemplatesExport>
+  <Template uid="2d480da0-1c82-4ccd-a86b-b064787dd0d8" shortcut="def" description="public void" text="public void $METHOD_NAME$()&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="METHOD_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="686e7658-dc23-40d6-8559-c150f28f50d6" shortcut="dest" description="Destructor" text="~$NAME$()&#xD;&#xA;{&#xD;&#xA;  Dispose(false);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="65780f88-cd4f-4883-8786-e4ff3bb6813f" shortcut="nie" description="Throw New NotImplementedException" text="throw new NotImplementedException();" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b6926f8d-953e-4b79-a3bb-6dec8b42cafe" shortcut="pf" description="public property" text="public $type$ $name$;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="type" expression="" initialRange="0" />
+      <Variable name="name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ca8b7ca8-49f0-4d30-bef9-b33e1fcff49f" shortcut="el" description="empty lambda" text="() =&gt; $END$" reformat="False" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="7fa00b7d-ebdb-423b-a686-28fd18119ed2" shortcut="le" description="less than or equal to" text="&lt;= $END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="465e6cf0-6944-4df6-a873-5e7d3b205645" shortcut="ge" description="greater than or equal to" text="&gt;= $END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="1655eb20-87d3-454c-8608-f38208767580" shortcut="ne" description="!=" text="!= $END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="deec62be-cd96-4337-b8c0-268b742bf1a1" shortcut="gt" description="goes to symbol" text="=&gt; " reformat="False" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+      <Scope type="InCSharpFile" minimumLanguageVersion="3.0" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+</TemplatesExport>

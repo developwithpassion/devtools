@@ -1,0 +1,36 @@
+<%
+words = {
+  :about => %w[abiyt],
+  :contact => %w[contect cntct],
+  :continue => %w[contine],
+  :great => %w[gret],
+  :hesitate => %w[hesi hies],
+  :information => %w[ionformation],
+  :interesting => %w[intersting],
+  :make => %w[mak],
+  :negotiations => %w[engotations],
+  :please => %w[pleaes],
+  :progress => %w[pgorgress],
+  :specifications => %w[sepcficiations],
+  :teaching => %w[teahing],
+  :the => %w[teh th eht],
+  :where => %w[wehere],
+  :you => %w[yuo],
+  :yourself => %w[youerself],
+  :somethign => %w[somethign],
+  :opportunity => %w[opprotunity]
+
+}
+%>
+:iabbrev xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+:iabbrev gbu God Bless You
+:iabbrev jpb Jean-Paul S. Boodhoo
+
+<% words.each do|word,mispellings|
+    mispellings.each do|mispelling| %>
+      :iabbrev <%="#{mispelling} #{word}"%>
+      <% if ! @is_cygwin %>
+      :iabbrev <%="#{mispelling.capitalize} #{word.capitalize}"%>
+      <% end %>
+    <% end %>
+<%end %>

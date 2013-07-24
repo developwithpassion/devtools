@@ -1,0 +1,26 @@
+#!/bin/sh
+# Use SourceGear BeyondCompare as mergetool for git in cygwin.
+# git config --global mergetool.bc3.cmd "beyondcompare-merge.sh \"\$LOCAL\" \"\$REMOTE\" \"\$BASE\" \"\$MERGED\""
+# git config --global mergetool.bc3.trustExitCode true
+# git mergetool -t bc3
+
+# Reference: http://www.tldp.org/LDP/abs/abs-guide.pdf
+
+library=githelperfunctions.sh
+
+#[ -f $library ] && . $library
+. $library
+
+echo Launching BeyondCompare - beyondcompare-merge.sh:
+
+set_path_vars "$1" "$2" "$3" "$4"
+
+echo "$beyondcompare" /lefttitle=Remote /righttitle=Local /centertitle=Base "$localwinpath" "$remotewinpath" "$basewinpath" "$mergedwinpath"
+
+{{# core.is_cygwin }}
+"$beyondcompare" /lefttitle=Remote /righttitle=Local /centertitle=Base "$remotewinpath" "$localwinpath" "$basewinpath" "$mergedwinpath"
+{{/core.is_cygwin }}
+
+{{# core.is_mingw }}
+"$beyondcompare" "$remotewinpath" "$localwinpath" "$basewinpath" "$mergedwinpath"
+{{/core.is_mingw }}

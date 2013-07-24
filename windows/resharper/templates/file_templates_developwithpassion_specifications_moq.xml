@@ -1,0 +1,57 @@
+<TemplatesExport>
+  <Template uid="cc48a0c6-82d1-46d3-a4b3-93807b6b2f08" shortcut="" description="ObservationsWithContract" text=" using Machine.Specifications;&#xD;&#xA; using developwithpassion.specifications.moq;&#xD;&#xA; using developwithpassion.specifications.extensions;&#xD;&#xA; using Arg = Moq.It;&#xD;&#xA;&#xD;&#xA; namespace $namespace$&#xD;&#xA; {   &#xD;&#xA;    public class $filename$&#xD;&#xA;    {&#xD;&#xA;    public abstract class concern : Observes&lt;$contract_interface$,&#xD;&#xA;        $contract_implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Subject(typeof($contract_implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;        It $first_observation$ = () =&gt;        &#xD;&#xA;            $END$&#xD;&#xA;    }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;" reformat="False" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="namespace" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="filename" expression="getFileNameWithoutExtension()" initialRange="-1" />
+      <Variable name="contract_interface" expression="" initialRange="0" />
+      <Variable name="contract_implementation" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="False" />
+    </CustomProperties>
+  </Template>
+  <Template uid="46080921-ca29-4e93-b240-bf6f99c62cfd" shortcut="" description="ObservationsWithoutContract" text=" using Machine.Specifications;&#xD;&#xA; using developwithpassion.specifications.moq;&#xD;&#xA; using developwithpassion.specifications.extensions;&#xD;&#xA; using Arg = Moq.It;&#xD;&#xA;&#xD;&#xA; namespace $namespace$&#xD;&#xA; {   &#xD;&#xA;    public class $filename$&#xD;&#xA;    {&#xD;&#xA;    public abstract class concern : Observes&lt;$contract_implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Subject(typeof($contract_implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        It $first_observation$ = () =&gt;        &#xD;&#xA;            $END$&#xD;&#xA;    }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;" reformat="False" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="namespace" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="filename" expression="getFileNameWithoutExtension()" initialRange="-1" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="contract_implementation" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="False" />
+    </CustomProperties>
+  </Template>
+  <Template uid="49a266eb-771d-4d5b-aab7-3fa64c3fe603" shortcut="" description="StaticObservations" text="using Machine.Specifications;&#xD;&#xA;using developwithpassion.specifications.moq;&#xD;&#xA;using developwithpassion.specifications.extensions;&#xD;&#xA;using Arg = Moq.It;&#xD;&#xA;&#xD;&#xA; namespace $namespace$&#xD;&#xA; {   &#xD;&#xA;    public class $filename$&#xD;&#xA;    {&#xD;&#xA;      public abstract class concern : Observes&#xD;&#xA;      {&#xD;&#xA;          &#xD;&#xA;      }&#xD;&#xA;&#xD;&#xA;      [Subject(typeof($sut$))]&#xD;&#xA;      public class when_$observation_name$ : concern&#xD;&#xA;      {        &#xD;&#xA;          It $first_observation$ = () =&gt;        &#xD;&#xA;              $END$&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="namespace" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="filename" expression="getFileNameWithoutExtension()" initialRange="-1" />
+      <Variable name="sut" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="False" />
+    </CustomProperties>
+  </Template>
+</TemplatesExport>

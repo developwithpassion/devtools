@@ -1,0 +1,111 @@
+set nocompatible
+set backupdir=C:\tempfiles\vimtemp
+set directory=C:\tempfiles\vimtemp\other
+
+source $VIM\_projectvimrc
+source $VIM\wordlist.vim
+
+" Remove ALL autocommands for the current group.
+:autocmd!	
+" Powershell
+au BufNewFile,BufRead *.ps1            setf ps1
+
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" General options
+set incsearch
+set ignorecase smartcase
+set number
+
+" height and width
+set lines=35
+set columns=150
+
+" Use two space tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" No menus and no toolbar
+set guioptions-=T  
+set guioptions+=m
+" Consolas 15 point, ansi character set 
+set guifont=Consolas:h13:cANSI
+
+"dictionary
+set dictionary+=$VIM\dictionary.vim
+
+" ruby color scheme
+highlight Normal guifg=White   guibg=Black
+highlight Cursor guifg=Black   guibg=Yellow
+highlight Keyword guifg=#FF6600
+highlight Define guifg=#FF6600
+highlight Comment guifg=#9933CC
+"highlight Type guifg=White gui=NONE
+"highlight rubySymbol guifg=#339999 gui=NONE
+"highlight Identifier guifg=White gui=NONE
+"highlight rubyStringDelimiter guifg=#66FF00
+"highlight rubyInterpolation guifg=White
+"highlight rubyPseudoVariable guifg=#339999
+"highlight Constant guifg=#FFEE98
+"highlight Function guifg=#FFCC00 gui=NONE
+"highlight Include guifg=#FFCC00 gui=NONE
+"highlight Statement guifg=#FF6600 gui=NONE
+"highlight String guifg=#66FF00
+"highlight Search guibg=White
+
+"vim settings
+:map <Leader>s :set spell<CR>
+:map <Leader>ns :set nospell<CR>
+:map <Leader>mail <C-w>n,wl<C-w>j\s
+:nmap ,v :e $VIM\_vimrc<CR>
+:nmap ,wl :e $VIM\wordlist.vim<CR>
+:nmap ,dict :e $VIM\dictionary.vim<CR>
+:nmap ,p :e $VIM\_projectvimrc<CR>
+:nmap ,V :so $VIM\_vimrc<CR>
+:nmap ,fv :e C:\documents and settings\administrator\_vimperatorrc<CR>
+:nmap ,sm :simalt ~<CR>
+:nnoremap <esc> :noh<return><esc>
+
+"presentation settings
+:nmap ,pf :set<SPACE>guifont=Consolas:h18:cANSI<CR>
+:nmap ,rf :set<SPACE>guifont=Consolas:h13:cANSI<CR>
+
+
+set diffexpr=MyDiff()
+function! MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
+
+

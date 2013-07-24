@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -gt 0 ]; then
+  filename=$1
+else
+  filename='proofs/suite.rb'
+fi
+
+command="ruby "
+
+RAILS_ENV=development $command $filename

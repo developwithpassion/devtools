@@ -1,0 +1,34 @@
+<TemplatesExport>
+  <Template uid="15b68b29-2ec3-4ce6-bca3-ac9cbc9b8080" shortcut="fake" description="Create a fake" text="fake.an&lt;$Type$&gt;()" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="Type" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b4e6aef6-b92b-49df-9ad8-168dd0623a8b" shortcut="deps" description="Dependency" text="depends.on&lt;$Item$&gt;();" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="Item" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4a409305-165b-4329-a8bb-7bcc2064f891" shortcut="oc" description="Observations With Contract" text="public class when_$spec_name$$base$ &#xD;&#xA;{&#xD;&#xA;  It should_$observation$ = () =&gt;&#xD;&#xA;    $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="spec_name" expression="" initialRange="0" />
+      <Variable name="base" expression="" initialRange="0" />
+      <Variable name="observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>

@@ -1,0 +1,21 @@
+configatron.configure_from_hash :core =>{
+    :launcher => 'start',
+    :editor => 'vi',
+    :is_windows => false,
+    :is_cygwin => false,
+    :is_linux => true,
+    :is_mingw => false,
+    :is_osx => false,
+    :vi  => 'vim',
+    :vim => 'vim',
+    :term => 'linux'
+  },
+  :git => {
+    :autocrlf => 'input',
+    :merge_tool => 'vimdiff',
+    :diff_tool => 'vimdiff',
+    :editor => 'vi',
+  },
+  :vim => {
+    :environment => 'linux'
+  }

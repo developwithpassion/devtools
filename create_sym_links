@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function steamLinks
+{
+  ln -s /to_backup/steam ~/Library/Application\ Support/Steam
+}
+
+function rootLinks
+{
+  sudo ln -s /Volumes/machd/tempfiles /tempfiles
+  sudo ln -s /Volumes/machd/to_backup /to_backup
+}
+
+function userLinks
+{
+  ln -s /Volumes/machd/to_backup/repositories ~/repositories
+  ln -s /tempfiles/documents ~/Documents
+  ln -s /tempfiles/downloads ~/Downloads
+  ln -s ~/repositories/github/oh-my-zsh ~/.oh-my-zsh
+}
+
+steamLinks
+rootLinks
+userLinks

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/usr/local/apache2/bin/apachectl $*

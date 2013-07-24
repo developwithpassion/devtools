@@ -1,0 +1,30 @@
+[general]
+ui = TTYUI
+accounts = jp_developwithpassion_gmail
+pythonfile = ~/repositories/developwithpassion/devtools/shared/dotfiles/offlineimap/offlineimap.py
+fsync = False
+
+
+[Account jp_developwithpassion_gmail]
+localrepository = jp_developwithpassion_gmail_local
+remoterepository = jp_developwithpassion_gmail_remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+
+#developwithpassion
+[Repository jp_developwithpassion_gmail_local]
+type = Maildir
+localfolders = /to_backup/imap_mail/jp_developwithpassion
+nametrans = get_remote_name
+
+
+[Repository jp_developwithpassion_gmail_remote]
+maxconnections = 1
+type = Gmail
+cert_fingerprint =b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+remoteuser = jp@developwithpassion.com
+remotepasseval = get_password("jp@developwithpassion.com")
+realdelete = no
+nametrans = get_local_name
+folderfilter = is_included

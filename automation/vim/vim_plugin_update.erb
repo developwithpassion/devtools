@@ -1,0 +1,129 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+require 'open-uri'
+
+
+@bundles = {
+ :altercation => %w[vim-colors-solarized],
+ :benmills => %w[vimux],
+ :developwithpassion => %w[TwitVim],
+ :ecomba => %w[vim-ruby-refactoring],
+ :ervandew => %w[supertab],
+ :garbas => %w[vim-snipmate],
+ :honza => %w[vim-snippets],
+ :kana => %w[vim-fakeclip],
+ :kchmck => %w[vim-coffee-script],
+ :kien => %w[ctrlp.vim],
+ :MarcWeber => %w[vim-addon-mw-utils],
+ :scrooloose => %w[syntastic nerdtree],
+ :jistr => %w[vim-nerdtree-tabs],
+ :sukima => %w[xmledit],
+ :timcharper => %w[textile.vim],
+ :tomtom => %w[tcomment_vim tlib_vim],
+ :tpope => %w[vim-cucumber vim-fugitive vim-git vim-haml vim-markdown vim-rails vim-surround vim-vividchalk vim-endwise],
+ "vim-ruby" => %w[vim-ruby]
+}
+
+@vim_org_scripts = [
+  ["IndexedSearch", "7062",  "plugin"],
+  ["jquery","12276", "syntax"],
+  ["autotag","12473", "plugin"],
+  ["DirDiff","13435","plugin"]
+]
+
+<% if not configatron.core.is_cygwin %>
+#  @bundles[:wincent] =  %w[Command-T]
+<% end %>
+
+@git_bundles = []
+
+@bundles.each do|git_user,repos|
+  repos.each do|repo_name|
+    @git_bundles << "http://github.com/#{git_user}/#{repo_name}.git"
+  end
+end
+
+@zips = [
+  ["vimgrep", "3407"],
+  ["bufexplorer", "12904"],
+  ["dbext", "13339"]
+]
+
+
+@bundles_to_ignore = %w[developwithpassion]
+
+
+bundles_dir = File.join(ENV["HOME"],%w[repositories developwithpassion devtools shared dotfiles vim .vim_runtime bundle])
+
+def remove_all_bundles
+  puts "Removing all bundles in #{Dir.pwd}"
+  Dir["*"].each {|bundle_folder| FileUtils.rm_rf bundle_folder unless @bundles_to_ignore.include?(bundle_folder)}
+end
+
+def unpack_bundles
+  @git_bundles.each do |url|
+    dir = url.split('/').last.sub(/\.git$/, '')
+    puts "  Unpacking #{url} into #{dir}"
+    `git clone #{url} #{dir}`
+    `rm -rf #{File.join(dir, ".git")}`
+  end
+end
+
+def build_vim_org_script_link(script_id)
+  "http://www.vim.org/scripts/download_script.php?src_id=#{script_id}"
+end
+
+def download_scripts
+  @vim_org_scripts.each do |name, script_id, script_type|
+    puts "  Downloading #{name}"
+    local_file = File.join(name, script_type, "#{name}.vim")
+    FileUtils.mkdir_p(File.dirname(local_file))
+    File.open(local_file, "w") do |file|
+      file << open(build_vim_org_script_link(script_id)).read
+    end
+  end
+end
+
+def create_unzip_command_for(script_id)
+  command = "curl #{build_vim_org_script_link(script_id)}"
+<% if configatron.core.is_windows %>
+  command += " > blah.zip" 
+<% else %>
+  command+= " | tar xv"
+<% end %>
+end
+
+def download_and_unpack_zips
+  @zips.each do|name,script_id|
+    FileUtils.mkdir_p(name)
+    Dir.chdir(name) do
+      `#{create_unzip_command_for(script_id)}`
+      <% if configatron.core.is_windows %>
+        `unzip blah.zip` 
+        `rm blah.zip`
+      <% end %>
+    end
+  end
+end
+
+def cleanup_doc_file_issues
+  file = File.join(%w[dbext doc dbext.txt])
+  contents = ""
+  File.open(file,'r') do |original_file|
+    contents = original_file.readlines
+  end
+  FileUtils.rm_f file
+  File.open(file,'w') do |updated_file|
+    contents.each do|line|
+      updated_file.puts line.gsub(/\*\/MyProjectDir\/\*/,'MyProjectDir')
+    end
+  end
+end
+
+Dir.chdir(bundles_dir) do
+  remove_all_bundles
+  unpack_bundles
+  download_scripts
+  download_and_unpack_zips
+  cleanup_doc_file_issues
+end

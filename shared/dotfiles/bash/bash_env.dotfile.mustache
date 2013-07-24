@@ -1,0 +1,32 @@
+OLD_PATH=$PATH
+export PATH="/usr/local/bin:/bin:/usr/local/sbin"
+
+{{# core.is_mingw }}
+export PATH="$PATH:/c/utils/git/bin:/c/ruby/193/bin:/c/utils/mercurial:{{{my.windows.paths.unix_style.vim}}}"
+{{/core.is_mingw }}
+
+export PATH="$PATH:$OLD_PATH"
+export PATH="$PATH:$(find {{{my.unix_style_devtools_root}}}/automation -name '.*' -prune -o -type d | tr "\n" ":")"
+export EDITOR='{{{core.editor}}}'
+
+#used to show changes in the prompt for a git folder
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# Unbreak broken, non-colored terminal
+export TERM='{{{core.term}}}'
+export GREP_OPTIONS="--color"
+
+{{# core.is_cygwin }}
+export WINDIR='/cygdrive/c/windows'
+{{/core.is_cygwin }}
+
+{{^ core.is_windows }}
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+  . "${HOME}/.gpg-agent-info"
+  export GPG_AGENT_INFO
+  export SSH_AUTH_SOCK
+  export SSH_AGENT_PID
+fi
+{{/core.is_windows }}
+
+

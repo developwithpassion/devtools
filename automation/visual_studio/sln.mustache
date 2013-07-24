@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+def launch(solution)
+  {{# core.is_cygwin}}
+    system("launch_vs_solution #{solution}")
+  {{/core.is_cygwin}}
+  {{# core.is_mingw}}
+    `start {{{my.windows.paths.win_style.devenv.escape}}} #{solution}`
+  {{/core.is_mingw}}
+end
+
+solutions = Dir.glob("**/*.sln")
+
+if (solutions.count == 1) 
+  launch(solutions[0])
+  exit
+end
+
+solutions.each_with_index do |solution,index|
+  puts "#{index+1} - #{File.basename(solution)} - (#{solution})"
+end
+puts "\r\nPick a solution"
+
+index = readline.chomp
+launch(solutions[index.to_i - 1]) if index
+
+
+
+
+

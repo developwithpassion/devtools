@@ -1,0 +1,21 @@
+configatron.configure_from_hash :core =>{
+    :launcher => 'cygstart',
+    :editor => 'vi',
+    :is_windows => true,
+    :is_linux => false,
+    :is_cygwin => true,
+    :is_mingw => false,
+    :is_osx => false,
+    :vi  => '/usr/local/bin/vim.exe',
+    :vim => 'vim',
+    :term => 'linux'
+  },
+  :git => {
+    :autocrlf => 'input',
+    :merge_tool => 'bc3',
+    :diff_tool => 'bc3',
+    :editor => 'vi',
+  },
+  :vim => {
+    :environment => 'windows'
+  }

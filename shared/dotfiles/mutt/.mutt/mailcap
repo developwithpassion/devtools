@@ -1,0 +1,21 @@
+# MS Office files
+application/msword; ~/.mutt/view_mail_attachment.rb --file:%s --type:"-" --open_with:'/Applications/OpenOffice.org.app'
+application/vnd.ms-excel; ~/.mutt/view_mail_attachment.rb --file:%s --type:"-"
+application/vnd.openxmlformats-officedocument.presentationml.presentation; ~/.mutt/view_mail_attachment.rb --file:%s --type:"-" --open_with:'/Applications/OpenOffice.org.app'
+application/vnd.oasis.opendocument.text; ~/.mutt/view_mail_attachment.rb --file:%s --type:"-" --open_with:'/Applications/OpenOffice.org.app'
+
+# Images
+image/jpg; ~/.mutt/view_mail_attachment.rb --file:%s --type:jpg
+image/jpeg; ~/.mutt/view_mail_attachment.rb --file:%s --type:jpg
+image/pjpeg; ~/.mutt/view_mail_attachment.rb --file:%s --type:jpg
+image/png; ~/.mutt/view_mail_attachment.rb --file:%s --type:png
+image/gif; ~/.mutt/view_mail_attachment.rb --file:%s --type:gif
+
+# PDFs
+application/pdf; ~/.mutt/view_mail_attachment.rb --file:%s --type:pdf
+
+# HTML
+text/html; ~/.mutt/view_mail_attachment.rb --file:%s --type:html
+
+# Unidentified files
+application/octet-stream; ~/.mutt/view_mail_attachment.rb --file:%s --type:"-"

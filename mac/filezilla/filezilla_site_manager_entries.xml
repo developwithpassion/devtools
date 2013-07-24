@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <Servers>
+        <Server>
+            <Host>camspecialistsconnect.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>camspeciali</User>
+            <Pass>vegas</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>camspecialists.com</Name>
+            <Comments />
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>camspecialists.com&#x0A;        
+        </Server>
+        <Server>
+            <Host>jpboodhoo.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>jpboodhooco</User>
+            <Logontype>2</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>jpboodhoo.com</Name>
+            <Comments />
+            <LocalDir>/Users/jp/repositories/developwithpassion/www.jpboodhoo.com/product/web.ui</LocalDir>
+            <RemoteDir>1 0 8 httpdocs</RemoteDir>
+            <SyncBrowsing>1</SyncBrowsing>jpboodhoo.com&#x0A;        
+        </Server>
+    </Servers>
+</FileZilla3>

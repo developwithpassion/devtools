@@ -1,0 +1,19 @@
+#!/bin/bash
+
+install_rvm()
+{
+  ./automation/rvm/rvm_install
+  cp shared/dotfiles/rvm/global.gems ~/
+  ./automation/rvm/rvm_install_some_rubies
+}
+
+settings="$(whoami).settings"
+if [ -e $settings  ]
+then
+  install_rvm
+else
+  cp settings_template $settings
+  echo "Please make any changes you need to the file $settings, and then re-run this script"
+fi
+
+

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+$:.unshift File.join(File.dirname(__FILE__), *%w[.. lib git])
+
+require 'auto_crlf_toggler'
+
+Git::AutoCrlfToggler.new.update_setting_to(ARGV[0])

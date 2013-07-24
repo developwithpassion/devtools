@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+
+items_to_remove = %w{Library .git .gitignore bin/brew README.md}
+if (system("brew --prefix"))
+    puts "Uninstalling Brew"
+    brew = `brew --prefix`.chomp
+    cellar = File.join(brew,'Cellar')
+    FileUtils.rm_r(cellar,:verbose => true) if (File.exists?(cellar))
+    `brew prune`
+    items_to_remove.map{|item| File.join(brew,item)}.select{|item| File.exists?(item)}.each do|item|
+        FileUtils.rm_r(item,:verbose => true)
+    end
+else
+    puts "Brew is not installed"
+end
+
+puts "Uninstalling RVM" unless(system("rvm implode"))

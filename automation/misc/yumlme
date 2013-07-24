@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+class File
+  class << self
+    def read_lines(file)
+      contents = nil
+
+      File.open(file, 'r') do |file|
+        file.each do |line|
+          yield line
+        end
+      end
+      contents.to_a
+    end
+  end
+end
+
+def build_yuml_url(yuml_markup)
+  "http://yuml.me/diagram/scruffy;dir:TB;/class/#{yuml_markup}.svg"
+end
+
+def draw(diagram)
+  yuml_markup = read_yuml_file(diagram)
+  url = build_yuml_url(yuml_markup)
+  system("open '#{url}'")
+end
+
+def read_yuml_file(file_name)
+  contents = []
+  File.read_lines(file_name) do |line|
+    contents << line.chomp
+  end
+  contents = contents.join(',')
+  contents
+end
+
+def pick_yuml_file
+  diagrams = Dir.glob("**/*.yuml")
+
+  exit if (diagrams.count == 0)
+
+  return diagrams[0] if (diagrams.count == 1) 
+
+  diagrams.each_with_index do |diagram,index|
+    puts "#{index+1} - #{File.basename(diagram)} - (#{diagram})"
+  end
+  puts "\r\nPick a diagram"
+
+  index = readline.chomp.to_i
+  diagram = diagrams[index - 1]
+end
+
+def yuml_file
+  return ARGV[0] if ARGV.length > 0
+  return pick_yuml_file
+end
+
+draw yuml_file

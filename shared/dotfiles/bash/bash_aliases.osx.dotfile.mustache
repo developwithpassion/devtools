@@ -1,0 +1,21 @@
+alias bctags=/usr/local/Cellar/ctags/5.8/bin/ctags
+alias rspecs='rspec spec/**/*.rb'
+# alias rk2='cd ~/repositories/github/keymando;killall Keymando;killall Terminal;rake build:compile_release;open build/Keymando/Build/Products/Release/Keymando.app/Contents/MacOS/Keymando'
+alias rk2='cd ~/repositories/github/keymando;killall Keymando;rake run'
+# alias rk2='killall Keymando;open /Applications/Keymando.app'
+alias dwp='cd ~/repositories/github/dwp'
+
+function attach()
+{
+  hdiutil attach $1 -mountpoint /tempfiles/downloads/blah
+  cd /tempfiles/downloads/blah
+}
+
+function detach()
+{
+  hdiutil detach /tempfiles/downloads/blah
+}
+
+alias mutt_clear='find /tempfiles/mutt_scratch -type file -exec rm {} +'
+alias muttd='mutt_clear;mutt -F ~/.muttrc_jp_developwithpassion'
+alias smail="tmux new-window 'mutt -F ~/.muttrc_jp_developwithpassion'"

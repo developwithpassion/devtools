@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+require File.join(File.dirname(__FILE__),'..','home.rb')
+
+FileUtils.cp(File.join(Home::AUTOMATION_FOLDER,'visual_studio','2010.sln'),"#{ARGV[0]}.sln")
+

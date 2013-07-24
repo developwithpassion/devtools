@@ -1,0 +1,93 @@
+#this is a comment
+#command aliases
+alias vi={{ core.vi }}
+{{^ core.is_cygwin }}
+alias vim={{ core.vim }}
+{{/core.is_cygwin}}
+
+alias ..='cd ..'
+alias rm='rm -fr $*'
+alias qtar='tar -xzvf $*'
+
+#editing command aliases
+alias change_hosts='devtools;vi shared/hosts/hosts.mustache'
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+    {{^ core.is_osx }}
+    alias ls='ls --color=auto'
+    {{/core.is_osx }}
+    {{# core.is_osx }}
+    alias ls='gls --color=auto'
+    {{/core.is_osx }}
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# utility functions
+
+#function that will both create and switch to the directory specified
+function take()
+{
+   mkdir $1
+   cd $1
+}
+
+function dwp_git_clone()
+{
+  git clone git@developwithpassion.repo:$1 $2
+}
+
+function github_git_clone()
+{
+  git clone git@github.com:{{my.github.user}}/$1 $2
+}
+
+function bb_git_clone()
+{
+  git clone git@bitbucket:{{my.github.user}}/$1 $2
+}
+
+function slice_git_clone()
+{
+  git clone git@slicehost:$1 $2
+}
+
+#directory aliases
+alias developwithpassion='cd ~/repositories/developwithpassion'
+alias myssh='cd ~/repositories/developwithpassion/ssh'
+alias github='cd ~/repositories/github'
+alias devtools='cd {{{core.devtools_root}}}'
+alias blog='cd ~/repositories/developwithpassion/blog.developwithpassion.com'
+
+#file aliases
+alias licenses='vi ~/repositories/developwithpassion/developwithpassion.com/licenses/licenses.markdown'
+
+#git aliases
+alias ggm="gco master"
+alias gdaob="gitrb delete_all_other_branches"
+alias gcm="gitrb commit"
+alias gco="gitrb checkout $*"
+alias gmrg="gitrb merge $*"
+alias gs="gitrb switch $*"
+alias gp="gitrb push $*"
+alias gpo="gp origin"
+alias gpuo="gitrb pull origin $*"
+alias gbd="gitrb branch_delete $*"
+alias gb="git branch"
+alias gbr="git branch --remote"
+alias gd="git diff $1"
+alias gdt="git difftool $1"
+alias grh="gitrb reset"
+alias gf="git fetch $*"
+alias gfo="git fetch origin $*"
+alias gst="git status"
+
+alias dts='devtools_sync'

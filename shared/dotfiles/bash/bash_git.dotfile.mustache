@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+{{^ core.is_cygwin}}
+current_git_branch() {
+    git_directory="$(__gitdir)"
+    if [ -n "$git_directory" ]; then
+        echo `__git_ps1 "(%s)"`
+    fi
+}
+{{/core.is_cygwin}}
+
+#show the current working directory - followed by the git branch in red (if in a git directory)
+
+{{# core.is_cygwin }}
+PS1="\n$BRIGHT_CYAN\w$BRIGHT_YELLOW\n$GREEN => $RESET"
+{{/core.is_cygwin }}
+
+{{# core.is_mingw }}
+PS1="\n$BRIGHT_YELLOW\w$BRIGHT_RED\$(current_git_branch)\n$GREEN => $RESET"
+{{/core.is_mingw }}
+
+{{# core.is_osx }}
+PS1="\n$BLUE\w$RED\$(current_git_branch)\n$GREEN ⇒ $RESET"
+{{/core.is_osx}}
+

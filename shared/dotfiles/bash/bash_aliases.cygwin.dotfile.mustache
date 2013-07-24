@@ -1,0 +1,15 @@
+alias cyg-wrapper={{{core.devtools_root}}}/automation/cygwin/cyg-wrapper.sh
+
+alias vsln='cyg-wrapper /c/utils/vs2010/Common7/IDE/devenv.exe *.sln --cyg-env-convert=APPDATA,LOCALAPPDATA,ProgramData,ALLUSERSPROFILE,WINDIR --fork=1'
+
+alias prompt='cyg-wrapper cmd.exe --cyg-env-convert=APPDATA,LOCALAPPDATA,ProgramData,ALLUSERSPROFILE,WINDIR --fork=2'
+
+alias psh='cyg-wrapper powershell --cyg-env-convert=APPDATA,LOCALAPPDATA,ProgramData,ALLUSERSPROFILE,WINDIR --fork=2'
+alias open='cygstart'
+
+function gvim()
+{
+  cyg-wrapper {{{my.windows.paths.unix_style.vim}}}/gvim.exe --fork=1 $*
+}
+
+alias ~~='cd /c/users/jp'

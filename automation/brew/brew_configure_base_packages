@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+%w[git
+coreutils
+ctags
+freetds
+gdbm
+growlnotify
+ircii
+libevent
+macvim
+neon
+node
+pkg-config
+readline
+reattach-to-user-namespace
+tmux
+zsh
+].each{|item| system("brew install #{item}")}
+
+

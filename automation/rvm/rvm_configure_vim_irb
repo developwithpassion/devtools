@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+gems_to_install="interactive_editor awesome_print"
+rubies=($(rvm list strings| tr " " "\n"))
+
+for the_ruby in ${rubies[@]}
+do
+  rvm $the_ruby@global gem install $gems_to_install
+done
+  

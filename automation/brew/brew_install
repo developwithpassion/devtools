@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ ! -x /usr/local/Cellar ]; then 
+  echo "Installing Brew"
+  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+fi
+

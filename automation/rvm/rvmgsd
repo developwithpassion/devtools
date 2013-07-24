@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative 'rvm_util.rb'
+
+folder = File.join(Dir.pwd, ARGV[0])
+gemset = gemset_name(folder)
+system("rvm gemset delete #{gemset}")

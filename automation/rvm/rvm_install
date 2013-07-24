@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+install_rvm()
+{
+    if [ ! -x ~/.rvm ]; then 
+      mkdir -p ~/.rvm/gemsets
+      bash -s stable --ruby < <(curl -L https://get.rvm.io)
+    fi
+    source $HOME/.rvm/scripts/rvm
+    rvm reload
+    rvm uninstall default
+    cp -f ~/repositories/developwithpassion/devtools/shared/dotfiles/rvm/global.gems ~/.rvm/gemsets/
+}
+
+install_rvm
+./rvm_install_some_rubies

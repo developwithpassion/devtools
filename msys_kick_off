@@ -1,0 +1,15 @@
+#!/bin/bash
+
+settings="$(whoami).settings"
+if [ -e $settings  ]
+then
+  rm Gemfile.lock
+  gem install bundler
+  bundle install
+  expands
+else
+  cp settings_template $settings
+  echo "Please make any changes you need to the file $settings, and then re-run this script"
+fi
+
+

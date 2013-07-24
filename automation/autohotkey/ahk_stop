@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'win32ole'
+puts "Stopping processes"
+wmi = WIN32OLE.connect("winmgmts://")
+
+processes = wmi.ExecQuery("select * from win32_process")
+
+match = /AutoHotkey/
+processes.each do|process|
+  `taskkill /PID:#{process.ProcessID}` if match =~ process.Name
+end

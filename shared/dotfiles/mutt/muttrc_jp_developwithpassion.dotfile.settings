@@ -1,0 +1,3 @@
+configatron.mutt.folder = "/to_backup/imap_mail/jp_developwithpassion"
+configatron.msmtp.account = "jp"
+configatron.mutt.offline_imap_account = "jp_developwithpassion_gmail"

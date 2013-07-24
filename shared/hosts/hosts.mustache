@@ -1,0 +1,31 @@
+{{# core.is_windows }}
+#localhost
+127.0.0.1       .psf
+#github.com
+207.97.227.239 github.com
+{{/core.is_windows }}
+{{^core.is_windows }}
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost 
+fe80::1%lo0	localhost
+{{/core.is_windows }}
+
+#vm's
+# 172.16.223.130 developwithpassion.ubuntu #nat
+10.0.1.14 developwithpassion.ubuntu #bridged_macpro
+# 10.43.1.55 developwithpassion.ubuntu #bridged_macbook_pro
+
+#home computers
+10.0.1.32 hotmama #hotmamas imac
+10.0.1.13 developwithpassion.macbook_pro 
+10.0.1.8 developwithpassion_mac_pro
+
+#daxko computers
+10.4.0.10 qa
+10.3.0.23 devdb
+
+
+#itunes workaround
+# 74.208.105.171 gs.apple.com
+

@@ -1,0 +1,180 @@
+set folder = {{ mutt.folder }}
+
+set from = "jp@developwithpassion.com"
+set sendmail = "/usr/local/bin/msmtp -a {{ msmtp.account }}"
+set sendmail_wait = 0
+unset record
+
+# Goobook options ----------------------------------------
+set query_command="goobook query '%s'"
+
+# Paths ----------------------------------------
+set alias_file = ~/.mutt/alias
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file= ~/.mutt/certificates
+set mailcap_path = ~/.mutt/mailcap
+set tmpdir = ~/.mutt/temp
+set signature = ~/.mutt/sig
+
+source $alias_file
+
+#Basic Options ----------------------------------------
+set wait_key = no
+set mbox_type = Maildir
+set timeout = 3
+set mail_check = 0
+unset move
+set delete
+unset confirmappend
+set quit
+unset mark_old
+set beep_new
+set pipe_decode
+set thorough_search
+set editor = "vi --cmd 'let g:goobookrc=\"/Users/jp/.goobookrc\"'"
+
+# Sidebar Patch ----------------------------------------
+set sidebar_delim = '  |'
+set sidebar_visible = yes
+set sidebar_width = 24
+# color sidebar_new color221 color233
+
+# Status Bar ----------------------------------------
+set status_chars = " *%A"
+set status_format = "---[ Folder: %f ]-------[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Account Settings -----------------------------------
+
+# Default inbox.
+set spoolfile = "+INBOX"
+
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX \
+          +archive \
+          +sent \
+          +drafts \
+          +trash \
+
+# Other special folders.
+set mbox      = "+archive"
+set postponed = "+drafts"
+
+#Bindings --------------------------------------------------
+bind editor <Tab> complete-query
+bind editor \< complete
+bind editor <space> noop 
+
+# Gmail-style keyboard shortcuts
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager gam "<change-folder>=archive<enter>" "Go to all mail"
+macro index,pager gd "<change-folder>=drafts<enter>" "Go to drafts"
+macro index,pager gl "<change-folder>?/" "Go to specified folder"
+macro index,pager d "<save-message>=trash<enter>"  "Move message to trash"
+macro index,pager e "<save-message>=archive<enter>"  "Move message to all mail"
+macro index,pager D "<delete-message>"  "Move message to trash"
+macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt_notmuch /tempfiles/notmuch_search_results<enter><change-folder-readonly>/tempfiles/notmuch_search_results<enter>" "search mail (using notmuch)"
+
+# Generic
+bind generic l select-entry
+bind generic <right> select-entry
+
+# Index Key Bindings --------------------------------------------------
+bind index gg first-entry
+bind index G last-entry
+bind index R group-reply
+bind index <space> collapse-thread
+bind index p recall-message
+bind index N search-opposite
+macro index,pager gac "<pipe-message>goobook add<return>" "Add the contact to google contacts"
+
+
+# Sync email
+macro index O "<shell-escape>offlineimap -a {{ mutt.offline_imap_account }}<enter>"  "run offlineimap to sync all mail"
+macro index oa "<shell-escape>offlineimap -q -a {{ mutt.offline_imap_account }}<enter>" "run offlineimap to sync all folders quickly"
+macro index oi "<shell-escape>offlineimap -q -a {{ mutt.offline_imap_account}} -f INBOX<enter>" "run offlineimap to sync inbox"
+
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Sidebar Navigation
+bind index,pager <down> sidebar-next
+bind index,pager <up> sidebar-prev
+bind index,pager <right> sidebar-open
+
+# Pager
+bind pager j next-line
+bind pager k previous-line
+bind pager gg top
+bind pager G bottom
+bind pager R group-reply
+bind pager l view-attachments
+bind attach <return> view-mailcap
+macro pager \Cu "|urlview<enter>"  "call url view to open links"
+bind pager N search-opposite
+bind pager em edit 
+bind pager ct check-traditional-pgp
+macro pager cp "<shell-escape>find /tempfiles/mutt_scratch -type file -exec rm {} +<enter><check-traditional-pgp><decode-copy>/tempfiles/mutt_scratch/<enter><change-folder>/tempfiles/mutt_scratch/<enter><display-message>"
+
+
+
+# Compose
+bind compose p pgp-menu
+
+# Compose View Options -------------------------------
+set realname = "Jean-Paul S. Boodhoo"          # who am i?
+set envelope_from                              # which from?
+set sig_dashes                                 # dashes before sig
+set edit_headers                               # show headers when composing
+set fast_reply                                 # skip to compose when replying
+set askcc                                      # ask for CC:
+set fcc_attach                                 # save attachments with the body
+unset mime_forward                             # forward attachments as part of body
+set forward_format = "Fwd: %s"                 # format of subject when forwarding
+set forward_decode                             # decode when forwarding
+set attribution = "On %d, %n wrote:"           # format of quoting header
+set reply_to                                   # reply to Reply to: field
+set reverse_name                               # reply as whomever it was to
+set include                                    # include message in replies
+set forward_quote                              # include message in forwards
+
+# Prepare GPG usage
+source ~/.mutt/gpg.rc
+
+
+
+# Index View Options ---------------------------------
+set date_format = '%m/%d'
+set index_format = '[%Z]  %D  %-20.20F  %s'
+# set sort = reverse-date
+set sort = threads                         # like gmail
+set sort_aux = reverse-last-date-received  # like gmail
+set uncollapse_jump                        # don't collapse on an unread message
+set sort_re                                # thread based on regex
+set reply_regexp = '^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*'
+
+
+
+
+# Color ----------------------------------------
+color attachment brightmagenta default
+color error      brightred    default
+color hdrdefault red          default
+color indicator  brightyellow red
+color markers    brightcyan   default
+color message    brightcyan   default
+color normal     default      default
+color quoted     brightblue   default
+color search     default      green
+color signature  red          default
+color status     yellow       blue
+color tilde      magenta      default
+color tree       magenta      default

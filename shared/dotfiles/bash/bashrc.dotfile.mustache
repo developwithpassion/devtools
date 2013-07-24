@@ -1,0 +1,33 @@
+# bounce out if not running in interactive mode
+[ -z "$PS1" ] && return
+
+#. ~/.bash_aliases_coreutils
+. ~/.bash_aliases
+
+{{# core.is_osx }}
+. ~/.bash_aliases.osx
+. ~/.bash_source_rvm
+{{/core.is_osx}}
+
+{{# core.is_mingw }}
+. ~/.bash_aliases.mingw
+{{/core.is_mingw }}
+
+{{# core.is_cygwin }}
+. ~/.bash_aliases.cygwin
+{{/core.is_cygwin }}
+
+{{# core.is_windows }}
+. ~/.bash_aliases.windows
+. ~/.bash_ssh
+{{/core.is_windows }}
+
+{{^ core.is_linux }}
+. ~/.bash_colors
+{{/core.is_linux }}
+
+. ~/.bash_config
+. ~/.bash_env
+. ~/.bash_git
+. ~/.bash_git_completion
+

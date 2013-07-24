@@ -1,0 +1,34 @@
+<TemplatesExport>
+  <Template uid="deef867e-e0e6-4793-ad81-f4f7bcd24d8f" shortcut="" description="Delegate" text="namespace $name_space$&#xD;&#xA;{&#xD;&#xA;  public delegate void $file_name$();&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="name_space" expression="fileDefaultNamespace()" initialRange="0" />
+      <Variable name="file_name" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="False" />
+    </CustomProperties>
+  </Template>
+  <Template uid="83723778-1442-487b-b6b4-a0ac9f37ff4d" shortcut="" description="ValueDelegate" text="namespace $name_space$&#xD;&#xA;{&#xD;&#xA;  public delegate $return_type$ $file_name$($args$);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="return_type" expression="" initialRange="0" />
+      <Variable name="name_space" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="file_name" expression="getFileNameWithoutExtension()" initialRange="-1" />
+      <Variable name="args" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="False" />
+    </CustomProperties>
+  </Template>
+</TemplatesExport>

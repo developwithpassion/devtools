@@ -1,0 +1,20 @@
+<TemplatesExport>
+  <Template uid="2ca8bd79-c73f-4123-b2e5-8aa5b58ec3be" shortcut="" description="Explicit Delegate Block" text="{&#xD;&#xA;  $SELECTION$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="d02febcf-1b14-43b7-b8a6-87ffd356c2e0" shortcut="" description="class" text="class $name$&#xD;&#xA;{&#xD;&#xA;    $SELECTION$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>

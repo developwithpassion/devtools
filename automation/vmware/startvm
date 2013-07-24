@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+vms = Dir.glob("/to_backup/virtual_machines/vms/*.vmwarevm").to_a
+
+puts "Choose a vm:"
+
+vms.each_with_index{|vm,index| puts "#{index + 1} - #{File.basename(vm,File.extname(vm))}"}
+vm = gets.chomp.strip
+exit if vm == ''
+vm = vm.to_i - 1
+
+`open #{File.expand_path(vms[vm])}`
