@@ -7,7 +7,7 @@ install_rvm()
   ./automation/rvm/rvm_install_some_rubies
 }
 
-settings="$(whoami).settings"
+settings=$(./settings_file)
 if [ -e $settings  ]
 then
   install_rvm

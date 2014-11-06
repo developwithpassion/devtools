@@ -1,6 +1,6 @@
 #!/bin/bash
 
-settings="$(whoami).settings"
+settings=$(./settings_file)
 if [ -e $settings  ]
 then
   rm Gemfile.lock

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+settings=$(whoami).settings
+settings=$(echo $settings | sed "s:[ \-]::g")
+settings=$(echo $settings | sed "s:/::g")
+settings=$(echo $settings | sed "s:'::g")
+settings=$(echo $settings | tr '[:upper:]' '[:lower:]')
+echo $settings
